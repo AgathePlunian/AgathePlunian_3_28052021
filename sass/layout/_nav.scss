@@ -1,0 +1,25 @@
+.search-bar {
+  background-color: rgb(235, 235, 235);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgb(206, 206, 206) 0px 3px 2px inset;
+
+  .search-area{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: none;
+    background-color:rgb(235, 235, 235);;
+    padding-left: 0.8em;
+    font-size: 16px;
+    
+    &::placeholder{
+      color: black;
+      font-family: Roboto, sans-serif;
+      font-size: 1.1em;
+    }
+  }
+
+}
+

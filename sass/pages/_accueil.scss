@@ -1,0 +1,132 @@
+.presentation {
+  padding: 3em 2em;
+  text-align: center;
+  background-color: $soft-grey;
+  @include margin-bottom;
+
+  h1 {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+
+  p {
+    font-size: 1.1em;
+    color: $dark-grey;
+    margin-bottom: 2em;
+  }
+}
+
+.fonctionning {
+  padding-left: 1.8em;
+  padding-right: 1.5em;
+  @include margin-bottom;
+
+  .container-fonctionning {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+   }
+
+  
+    a {
+      display: block;
+      width: 100%;
+      color: black;
+      text-decoration: none;
+
+      .pres-card {
+      background-color: $soft-grey;
+      display: flex;
+      padding: 1.8em 1.5em;
+      border-radius: 20px;
+      position: relative;
+      width: 100%;
+      font-weight: 500;
+      margin-bottom: 1.5em;
+      @include box-shadow;
+      @include margin-bottom-card;
+
+      i {
+        font-size: 1.3em;
+        color: $dark-grey;
+        margin-right: 1.5em;
+        margin-left: 0.5em;
+        width: 10px;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+        color: $white;
+        width: 25px;
+        height: 25px;
+        padding-top: 3px;
+        border-radius: 15px;
+        position: absolute;
+        left: -10px;
+      }
+
+      &:hover {
+        background-color: lighten($primary-color, $amount: 35);
+
+        i {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.results {
+  padding: 3em 1em;
+  background-color: $soft-grey;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .restaurant-card {
+    width: 100%;
+    background-color: $white;
+    @include box-shadow;
+    @include margin-bottom-card;
+    border-radius: 15px;
+    height: 255px;
+    position: relative;
+
+    .img-container {
+      height: 180px;
+      overflow: hidden;
+  
+      img {
+        @include card-img;
+       }
+    }
+
+    .new {
+      border-radius: 3px;
+      text-align: center;
+      padding: 6px 10px;
+      background-color: $third-color;
+      width: 90px;
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      font-size: 15px;
+      font-weight: 500;
+      color: darken($color:$third-color, $amount: 40)
+    } 
+  }
+
+  .card-text {
+    @include card-text;
+
+    span {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

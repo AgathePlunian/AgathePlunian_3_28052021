@@ -1,0 +1,136 @@
+.arrow {
+  font-size: 1.3em;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+.btn-order {
+  text-align: center;
+
+  .btn {
+    padding: 1em 3em;
+  }
+}
+
+.restaurant-title {
+  font-family: Shrikhand, cursive;
+  font-weight: normal;
+  font-size: 1.7em;
+  margin-bottom: 0;
+}
+
+.menu {
+  .menu-header h1 {
+    font-size: 1.10em;
+    font-weight: 300;
+    margin-bottom: 0.2em;
+  }
+
+  .starter, .dish, .dessert {
+    margin-bottom: 3em;
+  }
+}
+
+.restaurant-menu {
+  padding: 2em 1em 4em 1em;
+  background-color: $soft-grey;
+  position: relative;
+  top: -2.5em; 
+  margin-bottom: -2.5em;
+  border-radius: 40px 40px 0 0;
+
+  .restaurant-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+  }
+
+  .border-bottom {
+    width: 45px;
+    height: 3px;
+    display: block;
+    background-color: $third-color;
+  }
+
+  .menu-header {
+    margin-bottom: 1em;
+  }
+
+  @-webkit-keyframes rotating {
+
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+  .menu-card {
+    padding: 0.7em 1em;
+    background-color: $white;
+    @include box-shadow;
+    border-radius: 15px;
+    margin-bottom: 1em;
+    position: relative;
+    overflow: hidden;
+
+    &:hover .price {
+      transform: translateX(-55px);
+    }
+
+    &:hover .chosen {  
+      transform: translateX(-200px);
+
+      i {
+        animation: rotating 0.8s linear;     
+      }
+    }
+    
+    .chosen {
+      transition: transform 600ms; 
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: -200px;
+      top: 0;
+      background-color: $third-color;
+      width: 15%;
+      height: 100%;
+      border-radius: 0 15px 15px 0;
+
+      i {
+        color: $white;
+        font-size: 1.4em;
+      }
+    }
+
+    .menu-title {
+      font-weight: 500;
+      margin-bottom: 0.1em;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .menu-card-text {
+      font-weight: 300;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+
+      .price {
+        display: block;
+        font-weight: 500;
+        position: absolute;
+        bottom: 0.7em;
+        right: 0.7em;
+        transition: transform 300ms ease-out 200ms ; 
+
+      }
+    }
+  }
+}
