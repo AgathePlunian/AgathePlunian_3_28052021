@@ -47,7 +47,25 @@ h2 {
   font-size: 1em;
   margin-bottom: 1em;
   background: linear-gradient(#FF79DA, #9356DC);
-  box-shadow: #cccccc 4px 5px 7px, #ebebeb -3px -1px 7px; }
+  box-shadow: #cccccc 4px 5px 7px, #ebebeb -3px -1px 7px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1; }
+  .btn:hover::after {
+    opacity: 0.2; }
+  .btn::after {
+    border-radius: 30px;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 250ms;
+    box-shadow: #6e6e6e 4px 5px 8px, #afafaf -3px -1px 8px; }
 
 .heart {
   font-size: 1.6em;
@@ -157,32 +175,50 @@ h2 {
     background-color: #99E2D0; }
   .restaurant-menu .menu-header {
     margin-bottom: 1em; }
-@-webkit-keyframes rotating {
+@keyframes appear-card {
   from {
-    -webkit-transform: rotate(0deg); }
+    opacity: 0%;
+    margin-bottom: 1.5em; }
   to {
-    -webkit-transform: rotate(360deg); } }
+    opacity: 100%;
+    margin-bottom: 1em; } }
+  .restaurant-menu .cards .menu-card:nth-child(1n + 1) {
+    animation: appear-card 600ms 500ms both; }
+  .restaurant-menu .cards .menu-card:nth-child(1n + 2) {
+    animation: appear-card 600ms 600ms both; }
+  .restaurant-menu .cards .menu-card:nth-child(1n + 3) {
+    animation: appear-card 600ms 700ms both; }
+@keyframes to-top {
+  from {
+    margin-top: 5em; }
+  to {
+    margin-top: 0; } }
+  .restaurant-menu .menu {
+    animation: to-top 800ms ease-in both; }
   .restaurant-menu .menu-card {
     padding: 0.7em 1em;
     background-color: white;
     box-shadow: #e4e4e4 4px 5px 7px, #ebebeb -3px -1px 7px;
     border-radius: 15px;
-    margin-bottom: 1em;
     position: relative;
     overflow: hidden; }
+    .restaurant-menu .menu-card:hover i {
+      transition: transform 600ms; }
     .restaurant-menu .menu-card:hover .price {
-      transform: translateX(-70px); }
+      transform: translateX(-190%); }
+    .restaurant-menu .menu-card:hover .menu-card-text {
+      width: 70%; }
     .restaurant-menu .menu-card:hover .chosen {
-      transform: translateX(-200px); }
+      transform: translateX(-100%); }
       .restaurant-menu .menu-card:hover .chosen i {
-        animation: rotating 0.8s linear; }
+        transform: rotate(360deg); }
     .restaurant-menu .menu-card .chosen {
-      transition: transform 600ms;
+      transition: transform 500ms;
       position: absolute;
       display: flex;
       justify-content: center;
       align-items: center;
-      right: -200px;
+      right: -15%;
       top: 0;
       background-color: #99E2D0;
       width: 15%;
@@ -197,19 +233,21 @@ h2 {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden; }
-    .restaurant-menu .menu-card .menu-card-text {
-      width: 80%;
-      font-weight: 300;
+    .restaurant-menu .menu-card .menu-text {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden; }
+    .restaurant-menu .menu-card .menu-card-text {
+      transition: width 400ms;
+      width: 80%;
+      font-weight: 300; }
       .restaurant-menu .menu-card .menu-card-text .price {
         display: block;
         font-weight: 500;
         position: absolute;
         bottom: 0.7em;
-        right: 0.7em;
-        transition: transform 300ms ease-out 200ms; }
+        right: 6%;
+        transition: transform 300ms linear 100ms; }
 
 .presentation {
   padding: 3em 2em;

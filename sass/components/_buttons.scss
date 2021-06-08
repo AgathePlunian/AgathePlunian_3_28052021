@@ -8,7 +8,32 @@
   margin-bottom: 1em;
   @include bg-gradient-color;
   @include box-shadow-btn;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+
+  &:hover {
+    &::after {
+      opacity: 0.2;
+    }
+  }
+  &::after {
+    border-radius: 30px;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $white;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 250ms;
+    box-shadow: rgb(110, 110, 110) 4px 5px 8px, rgb(175, 175, 175) -3px -1px 8px ;
+  }
 }
+
+
 
 .heart { 
   font-size: 1.6em;

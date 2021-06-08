@@ -20,6 +20,7 @@
   margin-bottom: 0;
 }
 
+
 .menu {
   .menu-header h1 {
     font-size: 1.10em;
@@ -58,44 +59,77 @@
     margin-bottom: 1em;
   }
 
-  @-webkit-keyframes rotating {
 
-    from{
-        -webkit-transform: rotate(0deg);
+  @keyframes appear-card {
+    from {
+      opacity: 0%;
+      margin-bottom: 1.5em;
     }
-    to{
-        -webkit-transform: rotate(360deg);
+      to {
+        opacity: 100%;
+        margin-bottom: 1em;
+      }
+  }
+
+$i: 1;
+$time: 400ms;
+
+@for $i from 1 to 4 {
+  $time: $time + 100ms;
+  .cards .menu-card:nth-child( 1n + #{$i}) {
+    animation: appear-card 600ms $time both;
+  }
+}
+
+
+@keyframes to-top {
+  from {
+    margin-top: 5em;
+  }
+    to {
+      margin-top: 0;
     }
 }
+
+  .menu {
+    animation: to-top 800ms ease-in both;
+  }
 
   .menu-card {
     padding: 0.7em 1em;
     background-color: $white;
     @include box-shadow;
     border-radius: 15px;
-    margin-bottom: 1em;
     position: relative;
     overflow: hidden;
+   
+    &:hover i {
+     transition: transform 600ms;
+    }
 
     &:hover .price {
-      transform: translateX(-70px);
+      transform: translateX(-190%);
     }
 
-    &:hover .chosen {  
-      transform: translateX(-200px);
-
-      i {
-        animation: rotating 0.8s linear;     
-      }
+    &:hover .menu-card-text {
+      width: 70%;
     }
     
+    &:hover .chosen {  
+      transform: translateX(-100%);
+
+      i {
+        transform: rotate(360deg);
+      }
+    }
+
     .chosen {
-      transition: transform 600ms; 
+      transition: transform 500ms; 
       position: absolute;
       display: flex;
       justify-content: center;
       align-items: center;
-      right: -200px;
+      right: -15%;
       top: 0;
       background-color: $third-color;
       width: 15%;
@@ -108,7 +142,7 @@
       }
     }
 
-    .menu-title {
+    .menu-title{
       font-weight: 500;
       margin-bottom: 0.1em;
       text-overflow: ellipsis;
@@ -116,20 +150,25 @@
       overflow: hidden;
     }
 
-    .menu-card-text {
-      width: 80%;
-      font-weight: 300;
+    .menu-text  {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
+    }
+
+    .menu-card-text {
+      transition: width 400ms;
+      width: 80%;
+      font-weight: 300;
+       
 
       .price {
         display: block;
         font-weight: 500;
         position: absolute;
         bottom: 0.7em;
-        right: 0.7em;
-        transition: transform 300ms ease-out 200ms ; 
+        right: 6%;
+        transition: transform 300ms linear 100ms ; 
 
       }
     }
