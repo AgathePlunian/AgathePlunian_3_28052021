@@ -78,7 +78,7 @@
     overflow: hidden;
 
     &:hover .price {
-      transform: translateX(-55px);
+      transform: translateX(-70px);
     }
 
     &:hover .chosen {  
@@ -117,6 +117,7 @@
     }
 
     .menu-card-text {
+      width: 80%;
       font-weight: 300;
       text-overflow: ellipsis;
       white-space: nowrap;

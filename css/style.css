@@ -171,7 +171,7 @@ h2 {
     position: relative;
     overflow: hidden; }
     .restaurant-menu .menu-card:hover .price {
-      transform: translateX(-55px); }
+      transform: translateX(-70px); }
     .restaurant-menu .menu-card:hover .chosen {
       transform: translateX(-200px); }
       .restaurant-menu .menu-card:hover .chosen i {
@@ -198,6 +198,7 @@ h2 {
       white-space: nowrap;
       overflow: hidden; }
     .restaurant-menu .menu-card .menu-card-text {
+      width: 80%;
       font-weight: 300;
       text-overflow: ellipsis;
       white-space: nowrap;
