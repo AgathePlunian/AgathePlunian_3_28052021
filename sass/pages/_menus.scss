@@ -3,6 +3,7 @@
   position: absolute;
   top: 1em;
   left: 1em;
+  color: black;
 }
 
 .btn-order {
@@ -14,12 +15,11 @@
 }
 
 .restaurant-title {
-  font-family: Shrikhand, cursive;
+  font-family: 'Shrikhand', cursive;
   font-weight: normal;
   font-size: 1.7em;
   margin-bottom: 0;
 }
-
 
 .menu {
   .menu-header h1 {
@@ -58,7 +58,6 @@
   .menu-header {
     margin-bottom: 1em;
   }
-
 
   @keyframes appear-card {
     from {
@@ -108,11 +107,11 @@ $time: 400ms;
     }
 
     &:hover .price {
-      transform: translateX(-190%);
+      transform: translateX(-4.5em);
     }
 
     &:hover .menu-card-text {
-      width: 70%;
+      width: 60%;
     }
     
     &:hover .chosen {  
@@ -129,10 +128,10 @@ $time: 400ms;
       display: flex;
       justify-content: center;
       align-items: center;
-      right: -15%;
+      right: -4.5em;
       top: 0;
       background-color: $third-color;
-      width: 15%;
+      width: 4.5em;
       height: 100%;
       border-radius: 0 15px 15px 0;
 
@@ -167,7 +166,7 @@ $time: 400ms;
         font-weight: 500;
         position: absolute;
         bottom: 0.7em;
-        right: 6%;
+        right: 1em;
         transition: transform 300ms linear 100ms ; 
 
       }

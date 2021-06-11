@@ -1,0 +1,62 @@
+@media screen and (min-width:992px){
+    .main-header {
+      padding: 0.6em;
+      img {
+        width: 30%;
+      }
+    }
+
+  .fonctionning {
+      padding-left: 3em;
+      padding-right: 3em;
+
+    .container-fonctionning {
+      flex-flow: row;
+      justify-content: space-between;
+
+    .card-container-fonctionning {
+      width: 29%;
+    }
+    }
+  }
+
+  .results {
+     header {
+      padding-left: 5%;
+     }
+    .menus-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      padding-left: 3em;
+      padding-right: 3em;
+
+      a {
+        display: block;
+        width: 48%;
+        margin-bottom: 1em;
+         .restaurant-card {
+           height: 360px;
+           .img-container {
+             height: 77%;
+           }
+         }
+      }
+    }
+  }
+
+  .main-footer {
+    padding: 2em 3em;
+
+    .svg {
+      width: 20%;
+    }
+     ul { 
+     display: flex;
+     li {
+       margin-right: 1.5em;
+       }
+     }
+   }
+
+}

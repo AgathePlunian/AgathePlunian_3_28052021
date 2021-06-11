@@ -1,0 +1,36 @@
+@media screen and (min-width:991px){
+  
+  .main-header {
+    align-items: center;
+  }
+
+  .arrow {
+    font-size: 3em;
+    top: 0.8em;
+  }
+
+  .banner {
+    height: 70vh;
+  }
+  
+  .restaurant-menu{
+    padding-left: 3em;
+    padding-right: 3em;
+
+    .restaurant-title {
+      font-size: 2em;
+    }
+
+
+
+    .cards {
+      display: flex;
+      justify-content: space-between;
+
+      .menu-card {
+        width: 31%;
+      }
+    }
+  }
+
+}
