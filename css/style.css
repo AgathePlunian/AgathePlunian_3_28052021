@@ -230,6 +230,12 @@ h2 {
   .btn-order .btn {
     padding: 1em 3em; }
 
+.banner {
+  height: 40vh;
+  overflow: hidden; }
+  .banner img {
+    vertical-align: middle; }
+
 .restaurant-title {
   font-family: 'Shrikhand', cursive;
   font-weight: normal;
@@ -292,7 +298,7 @@ h2 {
     .restaurant-menu .menu-card:hover i {
       transition: transform 600ms; }
     .restaurant-menu .menu-card:hover .price {
-      transform: translateX(-4.5em); }
+      transform: translateX(-4.8em); }
     .restaurant-menu .menu-card:hover .menu-card-text {
       width: 60%; }
     .restaurant-menu .menu-card:hover .chosen {

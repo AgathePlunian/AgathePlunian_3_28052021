@@ -14,6 +14,15 @@
   }
 }
 
+.banner {
+  height: 40vh;
+  overflow: hidden;
+
+  img {
+    vertical-align: middle;
+  }
+}
+
 .restaurant-title {
   font-family: 'Shrikhand', cursive;
   font-weight: normal;
@@ -107,7 +116,7 @@ $time: 400ms;
     }
 
     &:hover .price {
-      transform: translateX(-4.5em);
+      transform: translateX(-4.8em);
     }
 
     &:hover .menu-card-text {
