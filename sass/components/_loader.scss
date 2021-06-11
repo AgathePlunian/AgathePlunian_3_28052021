@@ -56,12 +56,13 @@
   }
 }
 
-.index-container, .main-footer {
+.index-container, .main-footer, .svg {
   animation: mask-container 4s ease-in-out;
 }
 
 @keyframes mask-container {
   0% {
+    margin:0;
     padding: 0;
     height: 0;
     overflow: hidden;
@@ -69,6 +70,7 @@
   }
 
   99% {
+    margin: 0;
     height: 0;
     padding: 0;
     overflow: hidden;
