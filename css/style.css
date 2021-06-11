@@ -89,90 +89,72 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
-/*
+.loader-container {
+  height: 80vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  animation: mask-loader 4s linear forwards; }
+  .loader-container h1 {
+    text-align: center;
+    color: black; }
+
 .loader {
   display: flex;
-  justify-content: space-between;
-  width: 15%;
+  justify-content: center;
   align-items: center;
-  height: 80vh;
-  margin: 0 auto;
-  animation: mask-loader 4s linear forwards;
-}
+  padding: 4em;
+  margin: 0 auto; }
 
 .round-1, .round-2, .round-3 {
   box-sizing: border-box;
-  width: 3em;
-  height: 3em;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: block;
-  animation: loader-anim 700ms infinite ease-in alternate-reverse;
-}
+  animation: loader-anim 700ms infinite ease-in alternate-reverse; }
 
 .round-1 {
-  background-color: $primary-color;
-}
+  background-color: #9356DC; }
 
 .round-2 {
-  background-color: $secondary-color;
+  background-color: #FF79DA;
   animation-delay: 200ms;
-}
+  margin-left: 1em;
+  margin-right: 1em; }
 
 .round-3 {
-  background-color: $third-color;
-  animation-delay: 400ms;
-}
+  background-color: #99E2D0;
+  animation-delay: 400ms; }
 
 @keyframes loader-anim {
-  0%{
-    transform:scale(1)
-  }
-
+  0% {
+    transform: scale(1); }
   100% {
-    transform: scale(0)
-  }
-}
-
+    transform: scale(0); } }
 .index-container, .main-footer {
-  animation: mask-container 4s ease-in-out;
-}
+  animation: mask-container 4s ease-in-out; }
 
 @keyframes mask-container {
   0% {
     padding: 0;
     height: 0;
-    overflow: hidden;
-   
-  }
-
+    overflow: hidden; }
   99% {
     height: 0;
     padding: 0;
-    overflow: hidden;
-
-  }
-
+    overflow: hidden; }
   100% {
-    height: auto;
-  }
-}
-
+    height: auto; } }
 @keyframes mask-loader {
   0% {
-    height: 80vh;
-  }
-
+    height: 80vh; }
   99% {
-    height: 80vh;
-  }
-
+    height: 80vh; }
   100% {
     overflow: hidden;
-    height: 0;
-  
-  }
-}
-*/
+    height: 0; } }
 .main-header {
   width: 100%;
   text-align: center; }
@@ -232,9 +214,11 @@ h2 {
 
 .banner {
   height: 40vh;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   .banner img {
-    vertical-align: middle; }
+    position: absolute;
+    bottom: 0; }
 
 .restaurant-title {
   font-family: 'Shrikhand', cursive;
@@ -340,7 +324,7 @@ h2 {
         position: absolute;
         bottom: 0.7em;
         right: 1em;
-        transition: transform 300ms linear 100ms; }
+        transition: transform 300ms linear 20ms; }
 
 .presentation {
   padding: 3em 2em;
@@ -417,10 +401,14 @@ h2 {
     height: 255px;
     position: relative; }
     .results .restaurant-card .img-container {
+      border-radius: 15px 15px 0 0;
       height: 180px;
-      overflow: hidden; }
+      overflow: hidden;
+      position: relative; }
       .results .restaurant-card .img-container img {
-        border-radius: 15px 15px 0 0; }
+        border-radius: 15px 15px 0 0;
+        position: absolute;
+        bottom: 0; }
     .results .restaurant-card .new {
       border-radius: 3px;
       text-align: center;
@@ -510,13 +498,15 @@ h2 {
 @media screen and (min-width: 991px) {
   .main-header {
     align-items: center; }
+    .main-header img {
+      width: 25%; }
 
   .arrow {
-    font-size: 3em;
+    font-size: 2.6em;
     top: 0.8em; }
 
   .banner {
-    height: 70vh; }
+    height: 60vh; }
 
   .restaurant-menu {
     padding-left: 3em;
@@ -525,6 +515,7 @@ h2 {
       font-size: 2em; }
     .restaurant-menu .cards {
       display: flex;
+      flex-flow: row wrap;
       justify-content: space-between; }
       .restaurant-menu .cards .menu-card {
         width: 31%; } }

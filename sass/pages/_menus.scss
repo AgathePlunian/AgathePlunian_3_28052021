@@ -17,9 +17,10 @@
 .banner {
   height: 40vh;
   overflow: hidden;
-
+  position: relative;
   img {
-    vertical-align: middle;
+    position: absolute;
+    bottom: 0;
   }
 }
 
@@ -176,7 +177,7 @@ $time: 400ms;
         position: absolute;
         bottom: 0.7em;
         right: 1em;
-        transition: transform 300ms linear 100ms ; 
+        transition: transform 300ms linear 20ms ; 
 
       }
     }

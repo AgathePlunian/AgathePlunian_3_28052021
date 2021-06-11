@@ -97,11 +97,15 @@
     position: relative;
 
     .img-container {
+      @include card-img;
       height: 180px;
       overflow: hidden;
+      position: relative;
   
       img {
         @include card-img;
+        position: absolute;
+        bottom: 0;
        }
     }
 
