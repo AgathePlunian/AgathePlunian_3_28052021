@@ -21,6 +21,10 @@
   padding-right: 1.5em;
   @include margin-bottom;
 
+  .fonctionning-header {
+    margin-bottom: 2em;
+  }
+
   .container-fonctionning {
     display: flex;
     flex-flow: column;
