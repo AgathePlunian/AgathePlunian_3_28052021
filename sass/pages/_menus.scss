@@ -32,8 +32,8 @@
 }
 
 .menu {
-  .menu-header h1 {
-    font-size: 1.10em;
+  .menu-header h2 {
+    font-size: 1.2em;
     font-weight: 300;
     margin-bottom: 0.2em;
   }
@@ -151,7 +151,7 @@ $time: 400ms;
       }
     }
 
-    .menu-title{
+    .menu-title {
       font-weight: 500;
       margin-bottom: 0.1em;
       text-overflow: ellipsis;
