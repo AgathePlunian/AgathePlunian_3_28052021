@@ -105,6 +105,9 @@ h3 {
   .loader-container h1 {
     text-align: center;
     color: black; }
+  .loader-container p {
+    font-size: 1.5em;
+    font-weight: bold; }
 
 .loader {
   display: flex;
