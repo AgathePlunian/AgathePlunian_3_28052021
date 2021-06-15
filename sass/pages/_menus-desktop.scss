@@ -24,15 +24,13 @@
       font-size: 2em;
     }
 
-
-
     .cards {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
 
       .menu-card {
-        width: 31%;
+        width: 32%;
       }
     }
   }
