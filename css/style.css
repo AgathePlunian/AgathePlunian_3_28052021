@@ -95,7 +95,7 @@ h2 {
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  animation: mask-loader 4s linear forwards; }
+  animation: mask-loader 2s linear forwards; }
   .loader-container h1 {
     text-align: center;
     color: black; }
@@ -134,7 +134,7 @@ h2 {
   100% {
     transform: scale(0); } }
 .index-container, .main-footer, .svg {
-  animation: mask-container 4s ease-in-out; }
+  animation: mask-container 2s ease-in-out; }
 
 @keyframes mask-container {
   0% {
