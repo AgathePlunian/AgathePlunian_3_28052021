@@ -425,7 +425,7 @@ h2 {
       color: #278870; }
   .results .card-text {
     padding: 1em; }
-    .results .card-text span {
+    .results .card-text .header-card {
       display: flex;
       justify-content: space-between; }
 
@@ -467,7 +467,7 @@ h2 {
       flex-flow: row;
       justify-content: space-between; }
       .fonctionning .container-fonctionning .card-container-fonctionning {
-        width: 29%; }
+        width: 31%; }
 
   .results header {
     padding-left: 5%; }
